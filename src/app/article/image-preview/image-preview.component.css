@@ -1,0 +1,12 @@
+div {
+  text-align: center;
+  display: block;
+}
+
+.btn {
+	color: white;
+	border-color: #C3CAF8;
+	background-color: #C3CAF8;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}

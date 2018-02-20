@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="webapp App" timestamp="2017-11-16T23:36:22" hostname="localhost" time="14.65" errors="0" tests="12" skipped="0" disabled="0" failures="0">
+  <testcase classname="webapp App" name="should display welcome message" time="2.996" />
+  <testcase classname="webapp App" name="should login as a new user" time="1.108" />
+  <testcase classname="webapp App" name="should register a new user" time="3.201" />
+  <testcase classname="webapp App" name="should create new article and validate article appears in feed" time="0.59" />
+  <testcase classname="webapp App" name="should edit an article and validate changed article text" time="0.016" />
+  <testcase classname="webapp App" name="should update headline and verify change" time="0.404" />
+  <testcase classname="webapp App" name="should add the follower user and verify following count increases by one" time="0.344" />
+  <testcase classname="webapp App" name="should remove the follower user and verify following count decreases by one" time="0.296" />
+  <testcase classname="webapp App" name="should search for special article and verify author" time="4.23" />
+  <testcase classname="webapp App" name="should update user email and verify" time="0.824" />
+  <testcase classname="webapp App" name="should update user zipcode and verify" time="0.413" />
+  <testcase classname="webapp App" name="should update user password and verify" time="0.223" />
+ </testsuite>
+</testsuites>

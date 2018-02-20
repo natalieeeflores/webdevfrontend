@@ -1,0 +1,11 @@
+{
+  "name": "Jane Doe",
+  "avatar": "https://static.pexels.com/photos/54566/pexels-photo-54566-large.jpeg",
+  "status": "Welcome to my profile!",
+  "email": "janedoe@gmail.com",
+  "phone": "713-556-3333",
+  "zipcode": 11373,
+  "password": "",
+  "password_con": "",
+  "display_name": "Janana banana"
+}

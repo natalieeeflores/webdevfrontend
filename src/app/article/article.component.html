@@ -1,0 +1,46 @@
+<form (ngSubmit)=newTextPost() #postForm="ngForm">
+  <textarea class="form-control" rows="4" cols="50"
+  [(ngModel)]="model.post" name="post" id="post"
+  placeholder="Share your thoughts..."
+  ></textarea><br>
+  <button type="submit" class="btn" id="postBtn">Post</button>
+  <button type="reset" class="btn">Cancel</button>
+</form>
+<br>
+
+<div class="fileUpload btn btn-primary">
+  Upload photo
+  <input type="file" class="upload" accept="image/*" (change)="newImagePost()"
+  #fileInput id="fileInput">
+</div>
+<div class="form-group" id="articles">
+  <br>
+  <input class="search form-control" placeholder="Search in posts..."
+  (keydown)=search() [(ngModel)]=searchQuery name="searchQuery" id="searchbar"/>
+  <table id="posts">
+    <tr *ngFor="let post of posts" id={{post.id}}>
+      <td>
+        <h5>{{post.author}}</h5>
+        <div id="editDiv">
+          <input type="text" id="editInput">
+          <button class="btn" >Save Changes</button>
+        </div>
+        <img src={{post.img}} height="400"
+        class="img-rounded" *ngIf="post.img">
+        <p>{{post.text}}</p>
+        <h6>{{post.date}}</h6>
+        <div *ngFor="let comment of post.comments">
+          {{comment.author}} said: {{comment.text}}
+          <button class="btn btn-xs" *ngIf="comment.author == user?.username"
+          (click)="editComment(post.id, comment.commentId)" id="editComment">Edit</button>
+        </div>
+        <input type="text" id="commentInput" #commentInput>
+        <button class="btn" type="button" (click)="addComment(post.id)">Comment</button>
+        <button class="btn" type="button"
+        *ngIf="post.author == user?.username" (click)="editPost(post.id)" id="editPost">Edit</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,47 @@
+<mat-toolbar color="accent">
+  <span routerLink="/profile" id="profileLink">Profile</span>
+  <div id="title">Ricebook</div>
+  <span routerLink="/logout" (click)=logout()>Logout</span>
+</mat-toolbar>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+        <div>
+          <form (ngSubmit)=follow() #followForm="ngForm">
+            <input type="text" [(ngModel)]="tempUser" name="tempUser"
+            placeholder="Follow someone new..."><br>
+            <div hidden id="validUser"
+             class="alert">
+              This person has not signed up for RiceBook yet
+            </div>
+            <button type="submit" class="btn" id="followBtn">Follow</button>
+          </form>
+        </div>
+          <div *ngFor="let follower of followers_info; let i = index" id="followers">
+            <p>{{follower.username}}</p>
+            <img src={{follower.avatar}} height="100"
+            width="150" class="img-thumbnail">
+            <p>{{follower.headline}}</p>
+            <button class="btn" (click)=unfollow(i) id={{follower.username}}>Unfollow</button>
+          </div>
+    </div>
+    <div class="col-md-6">
+      <app-article [posts]="posts" [allPosts]="allPosts" [user]="user"></app-article>
+    </div>
+    <div class="col-md-3">
+      <p>{{user?.display}}</p>
+      <img src={{user?.avatar}} height="100"
+      width="150" class="img-thumbnail" *ngIf="user?.avatar">
+      <p id="status">{{user?.headline}}</p>
+      <form (ngSubmit)=updateStatus() #postForm="ngForm">
+        <input type="text" id="updateStatus"
+        [(ngModel)]="tempStatus" name="tempStatus"
+        placeholder="Update your status..."><br>
+  			<button type="submit" class="btn" id="updateStatusBtn">Update</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

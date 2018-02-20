@@ -1,0 +1,105 @@
+<mat-toolbar color="accent">
+  <span routerLink="/main">Main</span>
+  <span id="title">Ricebook</span>
+  <span (click)=reLogin() *ngIf="!auth?.merged"> Link Profile </span>
+</mat-toolbar>
+<br>
+<!-- <a class="btn" (click)=reLogin()>Link Profile by logging into your other account!</a> -->
+<br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Current Profile Information:</h1>
+      <div>
+        <img src={{user?.avatar}}
+        height="100" width="150" class="img-thumbnail" id="avatar"><br>
+        <div class="fileUpload btn btn-primary">
+          Upload photo
+          <input type="file" class="upload" accept="image/*" (change)="updateAvatar()"
+          #fileInput>
+        </div>
+      </div>
+      <div>
+        <span>Username:</span>
+        <span>{{user?.username}}</span><br>
+        <span>Display name: </span>
+        <span>{{user?.display}}</span><br>
+        <span>Email:</span>
+        <span id="emailDisplay">{{user?.email}}</span><br>
+        <span>Phone number:</span>
+        <span>{{user?.phone}}</span><br>
+        <span>Zipcode:</span>
+        <span id="zipcodeDisplay">{{user?.zipcode}}</span>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h1>Update Information:</h1>
+      <form (ngSubmit)="onSubmit()" #updateForm="ngForm">
+        <div class="form-group">
+          <label for="display_name">Display name:</label>
+          <input type="text" class="form-control" id="display_name"
+          [(ngModel)]="updatedInfo.display_name" name="display_name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email"
+          placeholder="Email address"
+          pattern="(\w*@\w*.\w*)\w"
+          [(ngModel)]="updatedInfo.email" name="email"
+          #email="ngModel">
+          <div [hidden]="email.valid || email.untouched"
+          class="alert alert-danger">
+          Please enter a valid email address of the form janedoe@mail.com
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="text" class="form-control" id="phone"
+        placeholder="123-456-7890"
+        pattern="\d{3}-\d{3}-\d{4}"
+        [(ngModel)]="updatedInfo.phone" name="phone"
+        #phone="ngModel">
+        <div [hidden]="phone.valid || email.untouched"
+        class="alert alert-danger">
+        Please enter a valid phone number of the form 123-456-7890
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="zipcode">Zipcode:</label>
+      <input type="number" class="form-control" id="zipcode"
+      placeholder="12345"
+      pattern="\d{5}"
+      [(ngModel)]="updatedInfo.zipcode" name="zipcode"
+      #zipcode="ngModel">
+      <div [hidden]="zipcode.valid || zipcode.untouched"
+      class="alert alert-danger">
+      Please enter a valid zipcode of the form 12345
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" id="password"
+    [(ngModel)]="updatedInfo.password" name="password">
+    <div hidden class="alert alert-danger" id="password_div">
+      Passwords must match!
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password_con">Password confirmation:</label>
+    <input type="password" class="form-control" id="password_con"
+    [(ngModel)]="updatedInfo.password_con" name="password_con">
+  </div>
+
+  <button type="submit" value="Submit" class="btn btn-success" id="submitBtn"
+  [disabled]="!updateForm.form.valid">
+  Submit</button>
+</form>
+</div>
+</div>
+</div>
+<router-outlet></router-outlet>

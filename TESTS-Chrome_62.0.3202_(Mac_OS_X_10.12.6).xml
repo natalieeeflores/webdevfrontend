@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 62.0.3202 (Mac OS X 10.12.6)" package="" timestamp="2017-11-17T05:27:04" id="0" hostname="Natalies-MacBook-Pro.local" tests="27" errors="0" failures="0" time="20.277">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"/>
+  </properties>
+  <testcase name="AppComponent should create the app" time="3.018" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).AppComponent"/>
+  <testcase name="AppComponent should have as title 'app'" time="0.555" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).AppComponent"/>
+  <testcase name="ArticleComponent should create" time="3.89" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).ArticleComponent"/>
+  <testcase name="ArticleComponent should update the search keyword" time="1.259" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).ArticleComponent"/>
+  <testcase name="ArticlesService should be created" time="0.044" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).ArticlesService"/>
+  <testcase name="CommentService should be created" time="0.057" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).CommentService"/>
+  <testcase name="EditArticleDialogComponent should create" time="0.837" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).EditArticleDialogComponent"/>
+  <testcase name="ImagePreviewComponent should create" time="1.223" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).ImagePreviewComponent"/>
+  <testcase name="NewArticleService should be created" time="0.149" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).NewArticleService"/>
+  <testcase name="AuthComponent should create" time="3.206" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).AuthComponent"/>
+  <testcase name="LoginFormComponent should create" time="0.353" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).LoginFormComponent"/>
+  <testcase name="LoginService should be created" time="0.076" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).LoginService"/>
+  <testcase name="RegisterService should be created" time="0.083" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).RegisterService"/>
+  <testcase name="RegistrationFormComponent should create" time="0.449" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).RegistrationFormComponent"/>
+  <testcase name="RegistrationFormComponent should register new user" time="0.317" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).RegistrationFormComponent"/>
+  <testcase name="MainComponent should create" time="0.717" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).MainComponent"/>
+  <testcase name="MainComponent should update headline and verify" time="0.569" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).MainComponent"/>
+  <testcase name="MainComponent should add new follower" time="0.644" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).MainComponent"/>
+  <testcase name="MainComponent should unfollow" time="0.51" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).MainComponent"/>
+  <testcase name="NavService should be created" time="0.049" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).NavService"/>
+  <testcase name="NewFollowerService should be created" time="0.008" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).NewFollowerService"/>
+  <testcase name="ProfileComponent should create" time="0.62" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).ProfileComponent"/>
+  <testcase name="ProfileComponent should update user email" time="0.727" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).ProfileComponent"/>
+  <testcase name="ProfileComponent should update zipcode" time="0.405" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).ProfileComponent"/>
+  <testcase name="ProfileComponent should update password" time="0.443" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).ProfileComponent"/>
+  <testcase name="ProfileService should be created" time="0.022" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).ProfileService"/>
+  <testcase name="UpdateProfilePicComponent should create" time="0.047" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).UpdateProfilePicComponent"/>
+  <system-out>
+    <![CDATA[Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

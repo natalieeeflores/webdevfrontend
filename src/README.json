@@ -1,0 +1,9 @@
+{
+  "netid": "nef3",
+  "frontend": "http://tall-jump.surge.sh/#/",
+  "backend": "https://webdevbackend.herokuapp.com/"
+}
+
+default user:
+username: nef3
+password: n-f-3

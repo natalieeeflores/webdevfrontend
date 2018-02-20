@@ -1,0 +1,97 @@
+<h1>Register</h1>
+<form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+  <div class="form-group">
+    <label for="account_name">Account name:</label>
+    <input type="text" class="form-control" id="account_name"
+    placeholder="account name"
+    pattern="[a|A-z|Z]\w*"
+    [(ngModel)]="model.account_name" name="account_name"
+    #name="ngModel"
+    required>
+    <div [hidden]="name.valid || name.untouched" class="alert alert-danger">
+      Your account name may contain capital letters, lowercase letters,
+      and numbers	but may not start with a number
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="display_name">Display name:</label>
+    <input type="text" class="form-control" id="display_name"
+    [(ngModel)]="model.display_name" name="display_name">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email"
+    placeholder="Email address"
+    pattern="(\w*@\w*.\w*)\w"
+    [(ngModel)]="model.email" name="email"
+    #email="ngModel"
+    required>
+    <div [hidden]="email.valid || email.untouched"
+     class="alert alert-danger">
+      Please enter a valid email address of the form janedoe@mail.com
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone Number:</label>
+    <input type="text" class="form-control" id="phone"
+    placeholder="123-456-7890"
+    pattern="\d{3}-\d{3}-\d{4}"
+    [(ngModel)]="model.phone" name="phone"
+    #phone="ngModel"
+    required>
+    <div [hidden]="phone.valid || email.untouched"
+    class="alert alert-danger">
+      Please enter a valid phone number of the form 123-456-7890
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="dob">Date of birth:</label>
+    <input type="date" class="form-control" id="dob"
+    placeholder="You must be 18 or older to register"
+    [(ngModel)]="model.dob" name="dob"
+    required>
+    <div hidden class="alert alert-danger" id="dob_div">
+      You must be 18 years of age of older to register!
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="zipcode">Zipcode:</label>
+    <input type="number" class="form-control" id="zipcode"
+    placeholder="12345"
+    pattern="\d{5}"
+    [(ngModel)]="model.zipcode" name="zipcode"
+    #zipcode="ngModel"
+    required>
+    <div [hidden]="zipcode.valid || zipcode.untouched"
+    class="alert alert-danger">
+      Please enter a valid zipcode of the form 12345
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" id="password"
+    [(ngModel)]="model.password" name="password"
+    required>
+    <div hidden class="alert alert-danger" id="password_div">
+      Passwords must match!
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password_con">Password confirmation:</label>
+    <input type="password" class="form-control" id="password_con"
+    [(ngModel)]="model.password_con" name="password_con"
+    required>
+  </div>
+
+  <button type="submit" value="Submit" class="btn btn-success" id="register"
+  [disabled]="!registrationForm.form.valid">
+  Submit</button>
+</form>
+
+<router-outlet></router-outlet>

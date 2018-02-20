@@ -1,0 +1,15 @@
+<mat-toolbar color="accent">
+  <span>Post Preview</span>
+</mat-toolbar>
+<br>
+<div mat-dialog-content>
+  <mat-form-field>
+    <img [src]="data.image" width="50%">
+    <br>
+    <input type="text" tabindex="1" [(ngModel)]="data.text">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button class="btn" [mat-dialog-close]="data.text" tabindex="2">Post</button>
+  <button class="btn" [mat-dialog-close]="false" (click)="onNoClick()" tabindex="-1">Cancel</button>
+</div>

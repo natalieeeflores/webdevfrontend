@@ -1,0 +1,25 @@
+{
+  "followers":
+  [
+    {
+      "name" : "John Doe",
+      "avatar": "https://static.pexels.com/photos/6945/sunset-summer-golden-hour-paul-filitchkin-large.jpg",
+      "status": "Hey I'm John Doe"
+    },
+    {
+      "name": "Jane Smith",
+      "avatar": "https://static.pexels.com/photos/58021/pexels-photo-58021-large.jpeg",
+      "status": "Hey I'm Jane Smith"
+    },
+    {
+      "name": "John Smith",
+      "avatar": "https://static.pexels.com/photos/26939/pexels-photo-26939-large.jpg",
+      "status": "Hey I'm John Smith"
+    }
+  ],
+  "newFollower":
+  {
+    "avatar": "https://images.pexels.com/photos/594000/pexels-photo-594000.jpeg?w=940&h=650&auto=compress&cs=tinysrgb",
+    "status": "Living life on the edge"
+  }
+}
